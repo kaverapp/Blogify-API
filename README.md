@@ -37,6 +37,7 @@ The server will run on http://localhost:3000.
 
 📌 API Endpoints
 1️⃣ Create a Blog Post
+```bash
 POST /create
 {
   "title": "My First Blog",
@@ -44,28 +45,36 @@ POST /create
   "tags": ["tech", "coding"],
   "category": "Technology"
 }
+```
 ✅ Response
+```bash
 
 {
   "msg": "success",
   "create": { "id": "abc123", "title": "My First Blog", ... }
 }
+```
 2️⃣ Update a Blog Post
 POST /update
+```bash
 
 {
   "id": "abc123",
   "title": "Updated Title",
   "content": "Updated blog content."
 }
+```
 ✅ Response
+```bash
 
 {
   "msg": "updated successfully",
   "updated": { "id": "abc123", "title": "Updated Title", ... }
 }
+```
 3️⃣ Get a Blog Post by ID
 GET /getOne
+```bash
 
 {
   "id": "abc123"
@@ -76,26 +85,35 @@ GET /getOne
   "msg": "success getting data",
   "getData": { "id": "abc123", "title": "My First Blog", ... }
 }
+```
+
 4️⃣ Get All Blog Posts
 POST /getAll
+```bash
+
 ✅ Response
 
 {
   "msg": "success getting data",
   "getData": [{ "id": "abc123", "title": "My First Blog", ... }, { "id": "xyz456", "title": "Another Blog", ... }]
 }
+```
 5️⃣ Delete a Blog Post
+
 POST /delete
+```bash
 
 {
   "id": "abc123"
 }
+```
 ✅ Response
+```bash
 
 {
   "msg": "successfully deleted"
 }
-
+```
 
 📌 Technologies Used
 Node.js – Backend runtime
